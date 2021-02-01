@@ -5,17 +5,17 @@
 class Reward < Formula
   desc "Reward is CLI utility for orchestrating Docker based development environments."
   homepage ""
-  version "0.1.1-beta"
+  version "0.1.2-beta"
   license "MIT"
   bottle :unneeded
 
   if OS.mac?
-    url "https://github.com/rewardenv/reward/releases/download/v0.1.1-beta/reward_Darwin_x86_64.tar.gz"
-    sha256 "7e40aabd893585b282d314ed31fe4529c487a69398d0195a8a3144a45d4c4157"
+    url "https://github.com/rewardenv/reward/releases/download/v0.1.2-beta/reward_Darwin_x86_64.tar.gz"
+    sha256 "0eca84724ea8ed7072a67824be3d4ee4d263a077ad5dd0b3f83eed6cac4b6837"
   end
   if OS.linux? && Hardware::CPU.intel?
-    url "https://github.com/rewardenv/reward/releases/download/v0.1.1-beta/reward_Linux_x86_64.tar.gz"
-    sha256 "3890015058f01ce58a4455145c3df53911d070ef59d0ce32227dfef2d15700d5"
+    url "https://github.com/rewardenv/reward/releases/download/v0.1.2-beta/reward_Linux_x86_64.tar.gz"
+    sha256 "d3fcd3677b55eda8d8413e7afa93721836c90dcd1a84b454a6ee4cb84b4362af"
   end
 
   depends_on "docker" => :optional
