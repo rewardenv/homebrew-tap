@@ -11,11 +11,11 @@ class Reward < Formula
 
   if OS.mac?
     url "https://github.com/rewardenv/reward/releases/download/v0.1.14-beta/reward_Darwin_x86_64.tar.gz"
-    sha256 "745d9253a9c5485efe7838d2c0c0ada6f5222f75cd26e23a18db2b9e61c25355"
+    sha256 "776a4d01df3a90aa88e679979e4b365d6a65c2894a4113ef8438c5e3ee7fc87c"
   end
   if OS.linux? && Hardware::CPU.intel?
     url "https://github.com/rewardenv/reward/releases/download/v0.1.14-beta/reward_Linux_x86_64.tar.gz"
-    sha256 "4fc0818a9cbffac5890c51f6a1e80f003026828cf64e81a8c86465415581d9e9"
+    sha256 "070cf7049c3eef91502c091f701442a0b15969d1768a9abcff5bbe37a1117404"
   end
 
   depends_on "docker" => :optional
