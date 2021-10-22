@@ -5,29 +5,32 @@
 class Reward < Formula
   desc "Reward is CLI utility for orchestrating Docker based development environments."
   homepage ""
-  version "0.2.13-beta"
+  version "0.2.14-beta"
   license "MIT"
-  bottle :unneeded
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/rewardenv/reward/releases/download/v0.2.13-beta/reward_Darwin_x86_64.tar.gz"
-      sha256 "f3df20c172c57844bf1810f16c53b9fe40a352b2f785f9f7c6f3dddb7a861eaa"
+      url "https://github.com/rewardenv/reward/releases/download/v0.2.14-beta/reward_Darwin_x86_64.tar.gz"
+      sha256 "52f4181017880452a835202595ccb15bf9133b2f0eb8063392943dfa8e7a2102"
+
+      def install
+        bin.install "reward"
+      end
     end
   end
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/rewardenv/reward/releases/download/v0.2.13-beta/reward_Linux_x86_64.tar.gz"
-      sha256 "1ee345aba40c5f40edd40e9beb2c643b579f0a3291b6f6251410d4d60af6c9b4"
+      url "https://github.com/rewardenv/reward/releases/download/v0.2.14-beta/reward_Linux_x86_64.tar.gz"
+      sha256 "e324ccb2c48845196e9b040775e1e0f2c2beabda87c9227eea62cd4687c32ad5"
+
+      def install
+        bin.install "reward"
+      end
     end
   end
 
   depends_on "docker" => :optional
   depends_on "docker-edge" => :optional
   depends_on "mutagen" => :optional
-
-  def install
-    bin.install "reward"
-  end
 end
