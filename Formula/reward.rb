@@ -31,6 +31,5 @@ class Reward < Formula
   end
 
   depends_on "docker" => :optional
-  depends_on "docker-edge" => :optional
   depends_on "mutagen" => :optional
 end
