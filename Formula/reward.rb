@@ -5,13 +5,13 @@
 class Reward < Formula
   desc "Reward is CLI utility for orchestrating Docker based development environments."
   homepage ""
-  version "0.2.17-beta"
+  version "0.2.18-beta"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/rewardenv/reward/releases/download/v0.2.17-beta/reward_Darwin_x86_64.tar.gz"
-      sha256 "d7d2951bd865b4fc4978d2f873e1bdf9e47e4ca75c40366b5a4002cfea944243"
+      url "https://github.com/rewardenv/reward/releases/download/v0.2.18-beta/reward_Darwin_x86_64.tar.gz"
+      sha256 "51d70041deca22c127053e29fa25610b4f064cc30c273fbbf687fccfe3996dde"
 
       def install
         bin.install "reward"
@@ -21,8 +21,8 @@ class Reward < Formula
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/rewardenv/reward/releases/download/v0.2.17-beta/reward_Linux_x86_64.tar.gz"
-      sha256 "8db0e96c4b625acbdfed9f13b0d21b9fa9e5daa94a259314ca3b13a098e7d1f5"
+      url "https://github.com/rewardenv/reward/releases/download/v0.2.18-beta/reward_Linux_x86_64.tar.gz"
+      sha256 "758681f3b999d2c92d58a3c56bc7f152a7a25b7b965069848befa47676be34f2"
 
       def install
         bin.install "reward"
