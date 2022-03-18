@@ -5,21 +5,21 @@
 class Reward < Formula
   desc "Reward is CLI utility for orchestrating Docker based development environments."
   homepage ""
-  version "0.2.29-beta"
+  version "0.2.30-beta"
   license "MIT"
 
   on_macos do
-    if Hardware::CPU.intel?
-      url "https://github.com/rewardenv/reward/releases/download/v0.2.29-beta/reward_Darwin_x86_64.tar.gz"
-      sha256 "bc5e55b9050cd589e74fb03c397da4e8f98d249f5eaad388182bdee8b2d13366"
+    if Hardware::CPU.arm?
+      url "https://github.com/rewardenv/reward/releases/download/v0.2.30-beta/reward_Darwin_arm64.tar.gz"
+      sha256 "535d9794c727cac83aa2b7013c4255068c0aa2a50d02d13a58d92e0ee16230f6"
 
       def install
         bin.install "reward"
       end
     end
-    if Hardware::CPU.arm?
-      url "https://github.com/rewardenv/reward/releases/download/v0.2.29-beta/reward_Darwin_arm64.tar.gz"
-      sha256 "abf46323751b2f9d010e48568bea442d5eaa5cc400ee977da2fc2ee3e7dab9a9"
+    if Hardware::CPU.intel?
+      url "https://github.com/rewardenv/reward/releases/download/v0.2.30-beta/reward_Darwin_x86_64.tar.gz"
+      sha256 "86d4d715c8038eb28a90feb3699f8a45945d85ffb3d294044d39851d40feefc1"
 
       def install
         bin.install "reward"
@@ -28,17 +28,17 @@ class Reward < Formula
   end
 
   on_linux do
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/rewardenv/reward/releases/download/v0.2.29-beta/reward_Linux_arm64.tar.gz"
-      sha256 "cd3ab4af5f3e9305dd000db1fadf17bdc08719b224a56c6458197d52b499bb0a"
+    if Hardware::CPU.intel?
+      url "https://github.com/rewardenv/reward/releases/download/v0.2.30-beta/reward_Linux_x86_64.tar.gz"
+      sha256 "61c6cf391aa9ea57af490ee00957fd43990947c45903a628cb411737422b8a63"
 
       def install
         bin.install "reward"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/rewardenv/reward/releases/download/v0.2.29-beta/reward_Linux_x86_64.tar.gz"
-      sha256 "39996a5473bf8643483de6fbd0fbfcb3d87fda7c74a48129c831e4c030f77ce3"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/rewardenv/reward/releases/download/v0.2.30-beta/reward_Linux_arm64.tar.gz"
+      sha256 "5762c4269cd8dabe35d14950b1e8e072b161c0b45a51cbd153e43fdd4f9f8fa5"
 
       def install
         bin.install "reward"
