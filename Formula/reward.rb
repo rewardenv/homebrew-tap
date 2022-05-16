@@ -5,21 +5,21 @@
 class Reward < Formula
   desc "Reward is CLI utility for orchestrating Docker based development environments."
   homepage ""
-  version "0.3.1-beta"
+  version "0.3.2-beta"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/rewardenv/reward/releases/download/v0.3.1-beta/reward_Darwin_arm64.tar.gz"
-      sha256 "d714aa192ee935a9cdd220830b73a083d69ddfd9ff29ac368f7febda3ae16912"
+      url "https://github.com/rewardenv/reward/releases/download/v0.3.2-beta/reward_Darwin_arm64.tar.gz"
+      sha256 "d0021c6d23b7ee89f70cda478dd44db53f1d6defa6e9c6427feba586f880ba96"
 
       def install
         bin.install "reward"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/rewardenv/reward/releases/download/v0.3.1-beta/reward_Darwin_x86_64.tar.gz"
-      sha256 "db7154c30a197e06f385950072bcab1e59807256b92e74315b115f6b9e7086d3"
+      url "https://github.com/rewardenv/reward/releases/download/v0.3.2-beta/reward_Darwin_x86_64.tar.gz"
+      sha256 "2a372198a93bbdfa7271aa41fc210b1a6587c9a29cc686240d3c93f038bde9c8"
 
       def install
         bin.install "reward"
@@ -29,16 +29,16 @@ class Reward < Formula
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/rewardenv/reward/releases/download/v0.3.1-beta/reward_Linux_x86_64.tar.gz"
-      sha256 "f1f8faf4e08676617d1ee5bdb4671687de409050625494549619f322e1d5f6d0"
+      url "https://github.com/rewardenv/reward/releases/download/v0.3.2-beta/reward_Linux_x86_64.tar.gz"
+      sha256 "eda0d22f318099bd540e3adb6c01a193ab996147c195bd3fa57efd0d019cab73"
 
       def install
         bin.install "reward"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/rewardenv/reward/releases/download/v0.3.1-beta/reward_Linux_aarch64.tar.gz"
-      sha256 "9f51687a809105e8c4587280d888cc1adbca1d4b833a6c172c240e76d5b7f702"
+      url "https://github.com/rewardenv/reward/releases/download/v0.3.2-beta/reward_Linux_aarch64.tar.gz"
+      sha256 "92739af893e20c6f9b0d7879d4453d00835334d3dec936762f52991e729509e4"
 
       def install
         bin.install "reward"
