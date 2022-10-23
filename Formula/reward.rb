@@ -5,21 +5,24 @@
 class Reward < Formula
   desc "Reward is CLI utility for orchestrating Docker based development environments."
   homepage ""
-  version "0.3.14-beta"
+  version "0.3.15-beta"
   license "MIT"
+
+  depends_on "docker" => :optional
+  depends_on "mutagen" => :optional
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/rewardenv/reward/releases/download/v0.3.14-beta/reward_Darwin_arm64.tar.gz"
-      sha256 "69742828275ba12969749fe09d4621a48a2fe0eefe6470be064b1f19606ac07f"
+      url "https://github.com/rewardenv/reward/releases/download/v0.3.15-beta/reward_Darwin_arm64.tar.gz"
+      sha256 "4e423e872e08a0ccf3f94af017b273bfa5d28882e78f42a50e0de31df798174b"
 
       def install
         bin.install "reward"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/rewardenv/reward/releases/download/v0.3.14-beta/reward_Darwin_x86_64.tar.gz"
-      sha256 "d25f979d725c85d800275536cd8ef742dbc70572df834d43baf26aa961d1e7ef"
+      url "https://github.com/rewardenv/reward/releases/download/v0.3.15-beta/reward_Darwin_x86_64.tar.gz"
+      sha256 "58e534206f5ccb31bbd7a31bfd07870f65837b6d32351872a6803b1f116fdd8f"
 
       def install
         bin.install "reward"
@@ -29,23 +32,20 @@ class Reward < Formula
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/rewardenv/reward/releases/download/v0.3.14-beta/reward_Linux_x86_64.tar.gz"
-      sha256 "fab45cca9b4fe88218496842bdaad9556fcf881f083bd67f093b2dc526642e56"
+      url "https://github.com/rewardenv/reward/releases/download/v0.3.15-beta/reward_Linux_x86_64.tar.gz"
+      sha256 "46bd17502efb548c0307ad250234cec3efe97df08128d49e600438b118598739"
 
       def install
         bin.install "reward"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/rewardenv/reward/releases/download/v0.3.14-beta/reward_Linux_aarch64.tar.gz"
-      sha256 "b3b485886377afb840584a24c7f0c1b07178b88810a11cd229302ce4ae33a912"
+      url "https://github.com/rewardenv/reward/releases/download/v0.3.15-beta/reward_Linux_aarch64.tar.gz"
+      sha256 "9799bb996c48eb762150de711ce2af1ef3ca1597c10b891603b1b209b8d4e924"
 
       def install
         bin.install "reward"
       end
     end
   end
-
-  depends_on "docker" => :optional
-  depends_on "mutagen" => :optional
 end
