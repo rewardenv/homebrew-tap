@@ -12,17 +12,17 @@ class RewardBeta < Formula
   depends_on "mutagen" => :optional
 
   on_macos do
-    if Hardware::CPU.intel?
-      url "https://github.com/rewardenv/reward/releases/download/v0.4.0-beta3/reward_Darwin_x86_64.tar.gz"
-      sha256 "df27e8b9757d1af2ca3a3c45d3cc149c8396581d65d338d3010802e6b3c011d6"
+    if Hardware::CPU.arm?
+      url "https://github.com/rewardenv/reward/releases/download/v0.4.0-beta3/reward_Darwin_arm64.tar.gz"
+      sha256 "105cd6359e7230abca7e279bac32a8ec42980aae4867b7d6daba5e27405ab9a2"
 
       def install
         bin.install "reward"
       end
     end
-    if Hardware::CPU.arm?
-      url "https://github.com/rewardenv/reward/releases/download/v0.4.0-beta3/reward_Darwin_arm64.tar.gz"
-      sha256 "40a160e7a071edad30dc59028ccd723f639e2cdc9f9efb5429e9e6cd0bd4688f"
+    if Hardware::CPU.intel?
+      url "https://github.com/rewardenv/reward/releases/download/v0.4.0-beta3/reward_Darwin_x86_64.tar.gz"
+      sha256 "73c6108e7f573bc2825b4f30a0dc95b634076102236ff81b680da62c1a360f9c"
 
       def install
         bin.install "reward"
@@ -31,17 +31,17 @@ class RewardBeta < Formula
   end
 
   on_linux do
-    if Hardware::CPU.intel?
-      url "https://github.com/rewardenv/reward/releases/download/v0.4.0-beta3/reward_Linux_x86_64.tar.gz"
-      sha256 "04e35e41f3ca506b7874ea8ff16af8e1626277feb1146e48453dd499f5239dac"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/rewardenv/reward/releases/download/v0.4.0-beta3/reward_Linux_aarch64.tar.gz"
+      sha256 "b06b5f1f4b35f3a91b546372017703fa793a09348d9d5d731540cb36e28ebe7d"
 
       def install
         bin.install "reward"
       end
     end
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/rewardenv/reward/releases/download/v0.4.0-beta3/reward_Linux_aarch64.tar.gz"
-      sha256 "ece4234748709f1280cec8997178f5cd133794d76e85108a040824f150491c3d"
+    if Hardware::CPU.intel?
+      url "https://github.com/rewardenv/reward/releases/download/v0.4.0-beta3/reward_Linux_x86_64.tar.gz"
+      sha256 "1b3ef3ebe95ca1d3f3415aa6082fa37b4ae933da7ac9074a25c06f444a7b58a5"
 
       def install
         bin.install "reward"
