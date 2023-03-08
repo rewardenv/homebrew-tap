@@ -5,7 +5,7 @@
 class Reward < Formula
   desc "Reward is CLI utility for orchestrating Docker based development environments."
   homepage ""
-  version "0.4.3"
+  version "0.4.4"
   license "MIT"
 
   depends_on "docker" => :optional
@@ -13,16 +13,16 @@ class Reward < Formula
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/rewardenv/reward/releases/download/v0.4.3/reward_Darwin_arm64.tar.gz"
-      sha256 "a769c5e42b843b296bd458c26a782c9705bf3b56836ddda29caec27a24f55937"
+      url "https://github.com/rewardenv/reward/releases/download/v0.4.4/reward_Darwin_arm64.tar.gz"
+      sha256 "217c192bf35282a38a2bd818a95166141746be4fbf138ac6c4638cef6e824069"
 
       def install
         bin.install "reward"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/rewardenv/reward/releases/download/v0.4.3/reward_Darwin_x86_64.tar.gz"
-      sha256 "7f681ab51bae8873b79ba2ef9d271648c19aca8adbbcf7798eadd6c1b1e79fce"
+      url "https://github.com/rewardenv/reward/releases/download/v0.4.4/reward_Darwin_x86_64.tar.gz"
+      sha256 "24525981cac489eafb3484d5b9f06e79f57cc4485b7918fa7f3c74a0a1550ab7"
 
       def install
         bin.install "reward"
@@ -32,16 +32,16 @@ class Reward < Formula
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/rewardenv/reward/releases/download/v0.4.3/reward_Linux_x86_64.tar.gz"
-      sha256 "450ea580f55d2c69d3940eff44dbe8c53a9b15371278730ba1b4a65a862b8808"
+      url "https://github.com/rewardenv/reward/releases/download/v0.4.4/reward_Linux_x86_64.tar.gz"
+      sha256 "1b493c9cc69f5dca6ab7a46b8d5c5562d06db2f855a408cac2c43aab3be33e0f"
 
       def install
         bin.install "reward"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/rewardenv/reward/releases/download/v0.4.3/reward_Linux_aarch64.tar.gz"
-      sha256 "fff0d9931ec50238af8c3a7543b987e57e36f742e657698aaa8ecdae6ed77e00"
+      url "https://github.com/rewardenv/reward/releases/download/v0.4.4/reward_Linux_aarch64.tar.gz"
+      sha256 "3b2fae762e681a00c631188264e2be2b5969bb610e11e820672ed9e48eebb5e5"
 
       def install
         bin.install "reward"
