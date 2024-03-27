@@ -12,17 +12,17 @@ class Reward < Formula
   depends_on "mutagen" => :optional
 
   on_macos do
-    if Hardware::CPU.intel?
-      url "https://github.com/rewardenv/reward/releases/download/v0.6.0/reward_Darwin_x86_64.tar.gz"
-      sha256 "d0a613c3448160dbe7ccd520de568f1e6871f8e0879b96c95952a226e15dfbed"
+    if Hardware::CPU.arm?
+      url "https://github.com/rewardenv/reward/releases/download/v0.6.0/reward_Darwin_arm64.tar.gz"
+      sha256 "be860aaeddd1b05716f569b0e0a1f9a9a5760e6dac68aada21c717175bd6a50e"
 
       def install
         bin.install "reward"
       end
     end
-    if Hardware::CPU.arm?
-      url "https://github.com/rewardenv/reward/releases/download/v0.6.0/reward_Darwin_arm64.tar.gz"
-      sha256 "df2a353232b7111be387021cf2891e4473a7f215c3ab038bc61ed5129c3f1ea1"
+    if Hardware::CPU.intel?
+      url "https://github.com/rewardenv/reward/releases/download/v0.6.0/reward_Darwin_x86_64.tar.gz"
+      sha256 "75e4b35e52dbfe6c12313224a5ebe17a053059784f16cd91a380b8d65cb21105"
 
       def install
         bin.install "reward"
@@ -31,17 +31,17 @@ class Reward < Formula
   end
 
   on_linux do
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/rewardenv/reward/releases/download/v0.6.0/reward_Linux_aarch64.tar.gz"
-      sha256 "f8900d9725a7e748aa5874e04d24d1282430a81edb5ae987d17badca830477fb"
+    if Hardware::CPU.intel?
+      url "https://github.com/rewardenv/reward/releases/download/v0.6.0/reward_Linux_x86_64.tar.gz"
+      sha256 "1f83a3bb361f2e14fd9a9fc671c2ade2a910bc57e1a04aad3e69b2a38c55fe8b"
 
       def install
         bin.install "reward"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/rewardenv/reward/releases/download/v0.6.0/reward_Linux_x86_64.tar.gz"
-      sha256 "6465d7e0fffcff135eed4379b00a87e0b42a269fe1b9cda6e2c4aa1b8023e287"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/rewardenv/reward/releases/download/v0.6.0/reward_Linux_aarch64.tar.gz"
+      sha256 "35da2ae1bd9771a0a26bbd4be33ae90a37f7ae81b1d0e9aacdcaa72dc9c051e6"
 
       def install
         bin.install "reward"
