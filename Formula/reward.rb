@@ -14,7 +14,7 @@ class Reward < Formula
   on_macos do
     if Hardware::CPU.arm?
       url "https://github.com/rewardenv/reward/releases/download/v0.6.1/reward_Darwin_arm64.tar.gz"
-      sha256 "a80e43842c68e0cbc3ac1535aebcb5cbbecd6bbf452dbd96c335a960dcf779d8"
+      sha256 "ffc52343d0cd7988a8bf75cda49b2bf3346b4c802ccc3e9307d7bd60610ecf61"
 
       def install
         bin.install "reward"
@@ -22,7 +22,7 @@ class Reward < Formula
     end
     if Hardware::CPU.intel?
       url "https://github.com/rewardenv/reward/releases/download/v0.6.1/reward_Darwin_x86_64.tar.gz"
-      sha256 "73d9fb2d122688b6e08f20d4a13f5ec604e642b56b63a2d7863f914d5076ddee"
+      sha256 "e0928d5e5b031df5bd7e62e6e5cdbff61b388e34b2ee7adc151820565c6724cd"
 
       def install
         bin.install "reward"
@@ -31,17 +31,17 @@ class Reward < Formula
   end
 
   on_linux do
-    if Hardware::CPU.intel?
-      url "https://github.com/rewardenv/reward/releases/download/v0.6.1/reward_Linux_x86_64.tar.gz"
-      sha256 "256bda15d0b2f04aa67382f29cd1e20afbdff3de9d3a67bcfcb98bb2454e3689"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/rewardenv/reward/releases/download/v0.6.1/reward_Linux_aarch64.tar.gz"
+      sha256 "8662ee11d1ed45b058d8185797eaec061a4af631d776b0b643ac68ec9c2d37ff"
 
       def install
         bin.install "reward"
       end
     end
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/rewardenv/reward/releases/download/v0.6.1/reward_Linux_aarch64.tar.gz"
-      sha256 "47a6d21872d3a3a4f23bf8b9bff92b776aacebc650d416eb6446e04e32f4288b"
+    if Hardware::CPU.intel?
+      url "https://github.com/rewardenv/reward/releases/download/v0.6.1/reward_Linux_x86_64.tar.gz"
+      sha256 "988bc535e4ea210a9f03f9b5505e205a4053c6281bf6fcb0a87b7751924e92e7"
 
       def install
         bin.install "reward"
