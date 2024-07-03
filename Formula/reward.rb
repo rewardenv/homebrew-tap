@@ -5,7 +5,7 @@
 class Reward < Formula
   desc "Reward is CLI utility for orchestrating Docker based development environments."
   homepage ""
-  version "0.6.7"
+  version "0.6.8"
   license "MIT"
 
   depends_on "docker" => :optional
@@ -13,16 +13,16 @@ class Reward < Formula
 
   on_macos do
     on_intel do
-      url "https://github.com/rewardenv/reward/releases/download/v0.6.7/reward_Darwin_x86_64.tar.gz"
-      sha256 "252f25a36004a7413a43173f1d6f6a5f5a9b7a01e95e5520570304dee3f15cf8"
+      url "https://github.com/rewardenv/reward/releases/download/v0.6.8/reward_Darwin_x86_64.tar.gz"
+      sha256 "6484f48ab721de49363322aa0855d143577070484ad6f0d6d56c98d84330f4b3"
 
       def install
         bin.install "reward"
       end
     end
     on_arm do
-      url "https://github.com/rewardenv/reward/releases/download/v0.6.7/reward_Darwin_arm64.tar.gz"
-      sha256 "8770e90d5090548918ec1b468a965d7eb8eaceda230d3b8aa3a35a6801f2d4e0"
+      url "https://github.com/rewardenv/reward/releases/download/v0.6.8/reward_Darwin_arm64.tar.gz"
+      sha256 "081738393bcc08ea9c2ec85d4c9d119487908d2f6dc0e970d4798af737891c2a"
 
       def install
         bin.install "reward"
@@ -33,8 +33,8 @@ class Reward < Formula
   on_linux do
     on_intel do
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/rewardenv/reward/releases/download/v0.6.7/reward_Linux_x86_64.tar.gz"
-        sha256 "d0d3fd2b1f1c2eef6d228f52c0209381ce44cbff34f21837e91b74a8c8d99be5"
+        url "https://github.com/rewardenv/reward/releases/download/v0.6.8/reward_Linux_x86_64.tar.gz"
+        sha256 "0dc37a73b55d2691e42d9cf57d9aebfd0ec9e01801d2df7b612566eeb8a19c27"
 
         def install
           bin.install "reward"
@@ -43,8 +43,8 @@ class Reward < Formula
     end
     on_arm do
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/rewardenv/reward/releases/download/v0.6.7/reward_Linux_aarch64.tar.gz"
-        sha256 "94eaef031c51cdbf8da90a539f30e4fee63c84a0ec209a70f48af65e09a0480c"
+        url "https://github.com/rewardenv/reward/releases/download/v0.6.8/reward_Linux_aarch64.tar.gz"
+        sha256 "4b0ac6a4a7946058b866c892cfedf254e019caed8107ee7f2b0d72e9b5ad728a"
 
         def install
           bin.install "reward"
