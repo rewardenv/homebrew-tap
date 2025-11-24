@@ -5,7 +5,7 @@
 class Reward < Formula
   desc "Reward is CLI utility for orchestrating Docker based development environments."
   homepage ""
-  version "0.7.9"
+  version "0.7.10"
   license "MIT"
 
   depends_on "docker" => :optional
@@ -13,16 +13,16 @@ class Reward < Formula
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/rewardenv/reward/releases/download/v0.7.9/reward_Darwin_x86_64.tar.gz"
-      sha256 "5b4dd1fbf63949734df29932209dc82fc008a5cd6dc76995a978e062517fb987"
+      url "https://github.com/rewardenv/reward/releases/download/v0.7.10/reward_Darwin_x86_64.tar.gz"
+      sha256 "6f69a30ec5b8ee93207852df6b213b815a8990ac0844a181eaa62264f51c6c2b"
 
       def install
         bin.install "reward"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/rewardenv/reward/releases/download/v0.7.9/reward_Darwin_arm64.tar.gz"
-      sha256 "44554545850fd86c7f1b50ce1c5471cdfb962a74a46134818733af5ff9e827df"
+      url "https://github.com/rewardenv/reward/releases/download/v0.7.10/reward_Darwin_arm64.tar.gz"
+      sha256 "00e14acf507331670fe97c468e62c844f4ed6d9b32f7365f2ca2020002d2d5f5"
 
       def install
         bin.install "reward"
@@ -32,15 +32,15 @@ class Reward < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/rewardenv/reward/releases/download/v0.7.9/reward_Linux_x86_64.tar.gz"
-      sha256 "f6b0613e38b8b70a1a57cfdd9afb57c6ad50cf12513d0ab137aecd9968fcf795"
+      url "https://github.com/rewardenv/reward/releases/download/v0.7.10/reward_Linux_x86_64.tar.gz"
+      sha256 "9d18e8bc38313773828b6d53432585a3b57d7170853595a44f124dd78b313aa1"
       def install
         bin.install "reward"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/rewardenv/reward/releases/download/v0.7.9/reward_Linux_aarch64.tar.gz"
-      sha256 "13fa34c686ef38ea3df6172df48782b635d630cc6d2378c3d86779060a00d8b7"
+      url "https://github.com/rewardenv/reward/releases/download/v0.7.10/reward_Linux_aarch64.tar.gz"
+      sha256 "d9df5fa2cfdce1694e2df1375e0f8e19293aaea91995d0def7156dbffaa42196"
       def install
         bin.install "reward"
       end
